@@ -1,5 +1,8 @@
 import express from "express"
 import dataBaseConect from "./config/databaseConnect.js"
+import routes from "./routes/index.js"
+
+
 
 const app = express()
 app.use(express.json())
@@ -22,5 +25,8 @@ connect.once("open", ()=>{
 
 
 
-export default app
 
+
+
+routes(app)
+export default app
